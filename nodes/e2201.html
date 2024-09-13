@@ -1,0 +1,49 @@
+<script type="text/javascript">
+    RED.nodes.registerType('E2201', {
+        category: 'Ikea Rodret',
+        color: '#ffffff',
+        defaults: {
+            name: { value: "Rodret E2201" },
+            min: { value: 0, required: true, validate: function(v) { return !isNaN(v) && v !== ""; } }, 
+            max: { value: 255, required: true, validate: function(v) { return !isNaN(v) && v !== ""; } }, 
+            intervalMs: { value: 50, required: true, validate: function(v) { return !isNaN(v) && v > 0; } }, 
+            step: { value: 1, required: true, validate: function(v) { return !isNaN(v) && v > 0; } } 
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: 'icon20x30.png',
+        label: function() {
+            return this.name || "Rodret E2201";
+        }
+    });
+</script> 
+  
+<script type="text/x-red" data-template-name="E2201">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name of Node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-min"><i class="fa fa-sort-numeric-asc"></i> Min</label>
+        <input type="number" id="node-input-min" placeholder="Minimum value">
+    </div>
+    <div class="form-row">
+        <label for="node-input-max"><i class="fa fa-sort-numeric-desc"></i> Max</label>
+        <input type="number" id="node-input-max" placeholder="Maximum value">
+    </div>
+    <div class="form-row">
+        <label for="node-input-intervalMs"><i class="fa fa-clock-o"></i> Interval (ms)</label>
+        <input type="number" id="node-input-intervalMs" placeholder="Intervall in Milliseconds">
+    </div>
+    <div class="form-row">
+        <label for="node-input-step"><i class="fa fa-step-forward"></i> Step</label>
+        <input type="number" id="node-input-step" placeholder="Amount of steps per interval">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="E2201">
+    <p>Adapter between MQTT and something else.</p>
+    <p>It takes a json object as input like {"action":"on","battery":85,"linkquality":7,"update":{"state":"idle"}} and convert it into a brightness value.</p>
+    <p>It also takes care about the long-press button = dim up or down continously.<p/>
+    <p>You can set min and max values. Also the step count and the step interval</p>
+</script>
