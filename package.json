@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-ikea-rodret-e2201",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adapter for MQTT E2201 topic to brightness level",
   "keywords": [
     "node-red",
@@ -32,6 +32,7 @@
     "nodes/",
     "README.md",
     "LICENSE",
-    "packagge.json"
+    "packagge.json",
+    "doc"
   ]
 }
