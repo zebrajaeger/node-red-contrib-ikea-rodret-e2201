@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-ikea-rodret-e2201",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Adapter for MQTT E2201 topic to brightness level",
   "keywords": [
     "node-red",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zebrajaeger/node-red-contrib-ikea-rodret.git"
+    "url": "https://github.com/zebrajaeger/node-red-contrib-ikea-rodret-e2201.git"
   },
   "author": "Lars Brandt",
   "license": "MIT",
@@ -32,7 +32,6 @@
     "nodes/",
     "README.md",
     "LICENSE",
-    "packagge.json",
-    "doc"
+    "packagge.json"
   ]
 }
